@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09090b"><meta name="description" content="D and D — your personal business command center.">
+<title>D and D — Command Center</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar">
+  <div class="brand"><div class="brand-mark">D</div><div><strong>D and D</strong><span>Command Center</span></div></div>
+  <nav>
+    <button class="nav-item active" data-page="dashboard"><span>⌂</span>Dashboard</button>
+    <button class="nav-item" data-page="websites"><span>◈</span>Websites</button>
+    <button class="nav-item" data-page="clients"><span>◎</span>Clients</button>
+    <button class="nav-item" data-page="money"><span>₦</span>Money</button>
+    <button class="nav-item" data-page="goals"><span>✦</span>Goals</button>
+    <button class="nav-item" data-page="tools"><span>▦</span>Tools</button>
+  </nav>
+  <div class="side-bottom"><div class="mini-card"><span class="dot"></span><div><b>Workspace ready</b><small>Everything is in one place.</small></div></div></div>
+</aside>
+<main class="main">
+<header class="topbar"><button class="mobile-menu" id="menuBtn">☰</button><div><span class="eyebrow">PERSONAL WORKSPACE</span><h1 id="pageTitle">Good morning 👋</h1></div><button class="profile">DH</button></header>
+<section id="dashboard" class="page active">
+  <div class="hero"><div><span class="pill">● LIVE WORKSPACE</span><h2>Build. Track. Grow.</h2><p>Your business, money and goals — without jumping between ten different apps.</p></div><button class="primary" data-page-jump="websites">＋ Create website</button></div>
+  <div class="stats">
+    <div class="stat"><span>PROJECTS</span><b>3</b><small>2 in progress</small></div>
+    <div class="stat"><span>CLIENTS</span><b>7</b><small>2 need follow-up</small></div>
+    <div class="stat"><span>GOAL PROGRESS</span><b>64%</b><small>₦64k of ₦100k</small></div>
+    <div class="stat"><span>THIS MONTH</span><b>₦38.5k</b><small>Revenue tracked</small></div>
+  </div>
+  <div class="grid-2">
+    <div class="panel"><div class="panel-head"><div><span class="eyebrow">FOCUS</span><h3>Today's mission</h3></div><span class="tag">3 tasks</span></div>
+      <label class="task done"><input type="checkbox" checked><span>Finish D and D homepage</span><em>Done</em></label>
+      <label class="task"><input type="checkbox"><span>Message 2 potential clients</span><em>Today</em></label>
+      <label class="task"><input type="checkbox"><span>Practice HTML for 45 minutes</span><em>Today</em></label>
+      <button class="text-btn" id="addTask">＋ Add task</button>
+    </div>
+    <div class="panel"><div class="panel-head"><div><span class="eyebrow">QUICK AI</span><h3>What should I do next?</h3></div><span class="ai-dot">✦</span></div>
+      <p class="muted">Tell the workspace what you have available and get a practical next step.</p>
+      <div class="ai-input"><input id="aiInput" placeholder="e.g. I have 2 hours and ₦20,000"><button id="aiBtn">Ask</button></div><div id="aiAnswer" class="ai-answer">Try: “I have 3 hours free and want to make money online.”</div>
+    </div>
+  </div>
+  <div class="panel"><div class="panel-head"><div><span class="eyebrow">RECENT</span><h3>Active projects</h3></div><button class="text-btn" data-page-jump="websites">View all →</button></div>
+    <div class="project-row"><div class="project-icon purple">DD</div><div class="grow"><b>D and D Business Site</b><small>Website · Updated today</small></div><span class="progress-label">78%</span><div class="progress"><i style="width:78%"></i></div></div>
+    <div class="project-row"><div class="project-icon blue">NX</div><div class="grow"><b>Next client landing page</b><small>Website · Draft</small></div><span class="tag">Draft</span></div>
+    <div class="project-row"><div class="project-icon green">PF</div><div class="grow"><b>Personal finance setup</b><small>Money · Tracking</small></div><span class="progress-label">52%</span><div class="progress"><i style="width:52%"></i></div></div>
+  </div>
+</section>
+<section id="websites" class="page">
+ <div class="section-title"><div><span class="eyebrow">BUILD</span><h2>Websites</h2><p>Turn an idea into a client-ready site.</p></div><button class="primary" id="newSite">＋ New website</button></div>
+ <div class="builder-card"><div class="builder-icon">✦</div><div class="grow"><h3>AI Website Starter</h3><p>Describe the business. D and D prepares the structure, sections and copy for you.</p></div><button class="secondary" id="startBuilder">Start</button></div>
+ <div class="cards-3"><div class="site-card"><div class="site-preview dark">D<span>and D</span></div><b>D and D Business Site</b><small>Published-ready · 78%</small><button class="outline">Open project</button></div><div class="site-card"><div class="site-preview light">NEX<span>O</span></div><b>Nexo Barber Studio</b><small>Draft · 31%</small><button class="outline">Continue</button></div><div class="site-card empty"><div class="plus">＋</div><b>Start from scratch</b><small>Build a custom site</small></div></div>
+</section>
+<section id="clients" class="page">
+ <div class="section-title"><div><span class="eyebrow">RELATIONSHIPS</span><h2>Clients</h2><p>Keep leads, projects and follow-ups together.</p></div><button class="primary" id="addClient">＋ Add client</button></div>
+ <div class="client-list"><div class="client-head"><span>CLIENT</span><span>PROJECT</span><span>STATUS</span><span>VALUE</span></div>
+ <div class="client"><div class="avatar">AK</div><b>Apex Kitchens</b><span>Business website</span><span class="status green-text">In progress</span><strong>₦45,000</strong></div>
+ <div class="client"><div class="avatar">NS</div><b>Nexo Studio</b><span>Landing page</span><span class="status yellow-text">Follow up</span><strong>₦25,000</strong></div>
+ <div class="client"><div class="avatar">RM</div><b>Rivers Media</b><span>Website redesign</span><span class="status blue-text">Proposal</span><strong>₦60,000</strong></div></div>
+</section>
+<section id="money" class="page">
+ <div class="section-title"><div><span class="eyebrow">FINANCE</span><h2>Money</h2><p>A simple view of what is coming in, going out and being saved.</p></div><button class="primary" id="addMoney">＋ Add transaction</button></div>
+ <div class="money-grid"><div class="money-card"><small>AVAILABLE</small><b>₦30,500</b><span>Current balance</span></div><div class="money-card"><small>INCOME</small><b>₦38,500</b><span>This month</span></div><div class="money-card"><small>SAVED</small><b>₦12,000</b><span>This month</span></div></div>
+ <div class="panel"><div class="panel-head"><h3>Money plan</h3><span class="tag">Simple mode</span></div><div class="bars"><div><span>Needs</span><i><em style="width:45%"></em></i><b>45%</b></div><div><span>Save</span><i><em style="width:30%"></em></i><b>30%</b></div><div><span>Growth</span><i><em style="width:25%"></em></i><b>25%</b></div></div></div>
+</section>
+<section id="goals" class="page">
+ <div class="section-title"><div><span class="eyebrow">DIRECTION</span><h2>Goals</h2><p>Small targets that add up to something bigger.</p></div><button class="primary" id="addGoal">＋ New goal</button></div>
+ <div class="goal-grid"><div class="goal-card"><div class="goal-top"><span class="goal-icon">₦</span><span>64%</span></div><h3>Make ₦100,000</h3><p>Business income target</p><div class="progress"><i style="width:64%"></i></div><small>₦64,000 / ₦100,000</small></div><div class="goal-card"><div class="goal-top"><span class="goal-icon">⌘</span><span>40%</span></div><h3>Learn web development</h3><p>HTML → CSS → JavaScript</p><div class="progress"><i style="width:40%"></i></div><small>8 / 20 sessions</small></div><div class="goal-card"><div class="goal-top"><span class="goal-icon">◆</span><span>25%</span></div><h3>Build 4 portfolio sites</h3><p>Proof that you can build</p><div class="progress"><i style="width:25%"></i></div><small>1 / 4 websites</small></div></div>
+</section>
+<section id="tools" class="page">
+ <div class="section-title"><div><span class="eyebrow">UTILITY</span><h2>Tools</h2><p>Useful little things without leaving your workspace.</p></div></div>
+ <div class="tools-grid"><div class="tool"><span>₦</span><h3>Investment calculator</h3><p>Estimate what a fixed amount could become over time.</p><button class="outline" id="calcBtn">Open calculator</button></div><div class="tool"><span>✓</span><h3>Quick checklist</h3><p>Turn a messy idea into clear next actions.</p><button class="outline" id="checkBtn">Create checklist</button></div><div class="tool"><span>◷</span><h3>Focus timer</h3><p>Start a distraction-free work session.</p><button class="outline" id="timerBtn">25:00 focus</button></div></div>
+</section>
+<footer>© 2026 D and D · Build something useful.</footer>
+</main>
+</div>
+<div class="modal" id="modal"><div class="modal-box"><button class="close" id="closeModal">×</button><div id="modalContent"></div></div></div>
+<script src="app.js"></script>
+</body></html>
